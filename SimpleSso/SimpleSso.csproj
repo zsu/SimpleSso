@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <Authors>Zhicheng Su</Authors>
+    <Company />
+    <Description>Simple SSO Solution</Description>
+    <Copyright>ZSU</Copyright>
+    <PackageProjectUrl>https://github.com/zsu/SimpleSso</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zsu/SimpleSso</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Dapper">
+      <Version>2.0.30</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SqlClient">
+      <Version>4.8.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+    <PackageReference Include="Dapper">
+      <Version>1.50.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
