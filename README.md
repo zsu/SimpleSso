@@ -1,0 +1,2 @@
+# SimpleSso
+Simple SSO solution
