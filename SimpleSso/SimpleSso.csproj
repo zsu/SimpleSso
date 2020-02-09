@@ -8,6 +8,7 @@
     <Copyright>ZSU</Copyright>
     <PackageProjectUrl>https://github.com/zsu/SimpleSso</PackageProjectUrl>
     <RepositoryUrl>https://github.com/zsu/SimpleSso</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">

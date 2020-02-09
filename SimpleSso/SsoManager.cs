@@ -29,7 +29,7 @@ namespace SimpleSso
             }
             return token;
         }
-        public string VerifyToken(string token)
+        public string VerifyToken(string token,bool deleteAfterVerified=true)
         {
             if (string.IsNullOrWhiteSpace(token))
                 return null;
@@ -39,7 +39,8 @@ namespace SimpleSso
                     new { Token = token });
                 if (result != null && result.CreatedDateUtc.AddSeconds(_tokenLifeTime) >= DateTime.UtcNow)
                 {
-                    //connection.Execute("delete from SimpleSso where Token=@Token", new { Token = token });
+                    if(deleteAfterVerified)
+                        connection.Execute("delete from SimpleSso where Token=@Token", new { Token = token });
                     return result.LoginId;
                 }
                 return null;

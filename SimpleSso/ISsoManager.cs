@@ -4,6 +4,6 @@
     {
         string CreateToken(string loginId, string source);
         int DeleteToken(string token);
-        string VerifyToken(string token);
+        string VerifyToken(string token,bool deleteAfterVerified);
     }
 }
