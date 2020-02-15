@@ -13,7 +13,7 @@ Simple SSO Solution.
 ```xml
   var sso = new SsoManager(_configuration.GetConnectionString("DefaultConnection"));
   var loginId = sso.VerifyToken(Request.Query[SsoManager.QueryStringToken]);
-  if(!string.loginId)
+  if(!string.IsNullOrWhiteSpace(loginId))
   {
       //Manually signin the user in the current application
   }
