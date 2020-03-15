@@ -2,7 +2,7 @@
 Simple SSO Solution.
 # NuGet
 ```xml
-Install-Package Install-Package SimpleSso
+Install-Package SimpleSso
 ```
 # Usage
 1. Run Db/Schema.sql to create table in Db.
