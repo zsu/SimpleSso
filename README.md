@@ -1,6 +1,9 @@
 # SimpleSso
 Simple SSO Solution.
-
+# NuGet
+```xml
+Install-Package Install-Package SimpleSso
+```
 # Usage
 1. Run Db/Schema.sql to create table in Db.
 2. Create token in source application and redirect to target by appending the token in url. Default tokenLifeTime is 30 seconds and can be override.
