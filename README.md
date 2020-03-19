@@ -15,7 +15,8 @@ Install-Package SimpleSso
 3. Verify token in target application
 ```xml
   var sso = new SsoManager(_configuration.GetConnectionString("DefaultConnection"));
-  var loginId = sso.VerifyToken(Request.Query[SsoManager.QueryStringToken]);
+  var queryString=Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(returnUrl?.Substring(returnUrl?.IndexOf("?")??0));
+  var loginId = queryString?.Count()>0?sso.VerifyToken(queryString[SsoManager.QueryStringToken]):null;
   if(!string.IsNullOrWhiteSpace(loginId))
   {
       //Manually signin the user in the current application
