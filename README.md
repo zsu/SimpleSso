@@ -1,3 +1,6 @@
+[![NuGet](https://img.shields.io/nuget/v/SimpleSso.svg)](https://www.nuget.org/packages/SimpleSso)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 # SimpleSso
 Simple SSO Solution.
 # NuGet
